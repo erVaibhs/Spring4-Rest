@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+
+<log4j:configuration>
+	
+	<appender name="videoLogger" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="10000KB" />
+		<param name="maxBackupIndex" value="5" />
+		<param name="File" value="D:\\SpringRest\\videoProduct\\log\\product.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="org.springframework" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="videoLogger"/>
+	</logger>
+		
+	<root>
+		<priority value="INFO"/>
+		<appender-ref ref="videoLogger" />
+	</root>
+</log4j:configuration>
