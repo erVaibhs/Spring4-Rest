@@ -33,7 +33,7 @@ public class VideoProductController {
 	@CrossOrigin
 	@RequestMapping("/video/{id}")
 	public List<Video> getVideoById(@PathVariable final String id){
-		LOGGER.info("get video by id "+ id);
+		LOGGER.info("get video by id  index change"+ id);
 		List<Video> list = new ArrayList<>();
 		list.add(videoservice.getVideoById(id));
 		return list;
